@@ -1,11 +1,9 @@
 <?php
-$user_name = "Igor";
-const TEST_CONSTANTA = 'asd';
+include 'task0/src/const.php';
+include 'task0/src/function.php';
 
-function showSomething()
-{
-return 'SOMETHING';
-}
-if (1 == 1) {
-echo 'hi';
+$userName = "Igor";
+
+if (1){
+    echo 'hi';
 }

@@ -3,14 +3,16 @@ const YOUNG_AGE = 1;
 const NORMAL_AGE = 18;
 const OLD_AGE = 65;
 
-$age = 19;
+$age = random_int(-10, 100);
+
+echo "Вы указали что ваш возраст $age, и ";
 
 if ($age >= NORMAL_AGE && $age <= OLD_AGE) {
-    echo "Вам еще работать и работать";
+    echo "вам еще работать и работать.";
 } elseif ($age > OLD_AGE) {
-    echo "Вам пора на пенсию";
+    echo "вам пора на пенсию.";
 } elseif ($age >= YOUNG_AGE  && $age < NORMAL_AGE) {
-    echo "Вам ещё рано работать";
+    echo "вам ещё рано работать.";
 } else {
-    echo "Неизвестный возраст";
+    echo "у вас неизвестный возраст или вы его не правильно ввели.";
 }

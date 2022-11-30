@@ -1,11 +1,11 @@
 <?php
-function task1($data, $true = false)
+function task1($data, $prav = false)
 {
     for ($i = 0; $i < count($data); $i++) {
         echo "<p>", $data[$i], "</p>\n";
     }
 
-    if ($true == true) {
+    if ($prav == true) {
         return implode(" ", $data);
     }
 
@@ -21,27 +21,24 @@ function task2($opertions)
                 $res += $args[$i];
             }
             return $res;
-            break;
         case '-':
             for($i = 1; $i < sizeof($args); $i++) {
                 $res -= $args[$i];
             }
             return $res;
-            break;
         case '*':
             $res = $args[2];
             for($i = 2; $i < sizeof($args); $i++) {
                 $res *= $args[$i];
             }
             return $res;
-            break;
         case '/':
             $res = $args[2];
             for($i = 2; $i < sizeof($args); $i++) {
                 $res /= $args[$i];
             }
             return $res;
-            break;
+
         case null:
             echo "Не введен второй аргумент. Допустимые аргменты: +,-,*,/.";
             break;
@@ -52,8 +49,11 @@ function task2($opertions)
 }
 function task3($row, $cell)
 {
-    if (!is_int($row) && !is_int($cell)) {
+    if (!is_int($row) || !is_int($cell)) {
         echo "Аргументами могут быть только целые числа";
+        return false;
+    } elseif ($row<0 || $cell<0) {
+        echo "Аргументами мугут быть только положительные числа";
     }
 
     echo "<table border='2'>";

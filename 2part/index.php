@@ -21,7 +21,7 @@ echo "<br>";
 
 echo "<h2>Task 3</h2>";
 
-task3(7, 7);
+task3(7.1, 7);
 
 echo "<br>";
 echo "<h2>Task 4</h2>";
