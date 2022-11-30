@@ -53,7 +53,8 @@ function task3($row, $cell)
         echo "Аргументами могут быть только целые числа";
         return false;
     } elseif ($row<0 || $cell<0) {
-        echo "Аргументами мугут быть только положительные числа";
+        echo "Аргументами могут быть только положительные числа";
+        return false;
     }
 
     echo "<table border='2'>";
